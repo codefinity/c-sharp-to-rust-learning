@@ -218,31 +218,143 @@ c-sharp-to-rust-learning/
 
 ## How to Run Examples
 
+### Naming convention
+
+Every example is a standalone binary. The **bin name is the filename without `.rs`**:
+
+```
+14_async_await_and_tokio/src/bin/streams.rs  →  cargo run --bin streams
+21_advanced_patterns/src/bin/state_machine.rs  →  cargo run --bin state_machine
+```
+
+All commands below must be run from the **workspace root** (the folder containing the top-level `Cargo.toml`).
+
+---
+
+### Discover available bins
+
 ```sh
-# Run a specific example:
+# List every binary in the workspace:
+cargo run --bin 2>&1 | grep "  " 
+
+# Or just browse the source tree:
+find . -path "*/src/bin/*.rs" -printf "%f\n" | sed 's/\.rs$//' | sort
+# Windows (PowerShell):
+Get-ChildItem -Recurse -Filter "*.rs" -Path "*/src/bin" | Select-Object BaseName | Sort-Object BaseName
+```
+
+---
+
+### Run a single example
+
+```sh
+cargo run --bin <bin_name>
+
+# Examples:
 cargo run --bin hello_world
-cargo run --bin variables_mutability
 cargo run --bin ownership
-# ... etc — the bin name matches the .rs filename
+cargo run --bin async_basics
+cargo run --bin streams
+cargo run --bin state_machine
+cargo run --bin performance_tips
+cargo run --bin ffi_basics
+```
 
-# Run tests for a specific module:
-cargo test -p ownership_borrowing_and_moves
-cargo test -p testing_and_documentation
+---
 
-# Run ALL tests:
-cargo test --workspace
+### Run in release mode (optimised, required for benchmarks)
 
-# Run benchmarks (module 18):
-cargo bench -p performance_and_benchmarking
+```sh
+cargo run --release --bin <bin_name>
 
-# Run the web server (module 20 — stays running):
-cargo run --bin web_server
+# Example:
+cargo run --release --bin performance_tips
+```
 
-# Pass arguments to a CLI app (module 19):
+---
+
+### Run an example from inside its module directory
+
+```sh
+cd 14_async_await_and_tokio
+cargo run --bin streams
+cargo run --bin async_basics
+```
+
+---
+
+### Pass arguments to CLI examples (module 19)
+
+```sh
 cargo run --bin clap_basics -- --help
 cargo run --bin clap_basics -- greet --name Alice --times 3
 cargo run --bin file_tool -- count src/bin/file_tool.rs
+cargo run --bin file_tool -- find . --ext rs
 ```
+
+The `--` separator tells Cargo to stop parsing its own flags and forward the rest to your program.
+
+---
+
+### Run tests
+
+```sh
+# Tests for one binary:
+cargo test --bin async_basics
+
+# Tests for one module (package):
+cargo test -p async_await_and_tokio
+
+# All tests in the workspace:
+cargo test --workspace
+
+# A specific test function by name:
+cargo test --bin async_basics -- async_test
+```
+
+---
+
+### Run benchmarks (module 18)
+
+```sh
+# All benchmarks:
+cargo bench -p performance_and_benchmarking
+
+# One benchmark suite:
+cargo bench -p performance_and_benchmarking --bench string_bench
+cargo bench -p performance_and_benchmarking --bench iter_bench
+```
+
+Benchmarks always run in release mode automatically.
+
+---
+
+### Quick-reference: all bins by module
+
+| Module | Bin name | Topic |
+|--------|----------|-------|
+| 01 | `hello_world` · `cargo_basics` · `rustup_info` | Getting started |
+| 02 | `variables_mutability` · `scalar_types` · `compound_types` · `strings` · `control_flow` · `constants_statics` | Types & syntax |
+| 03 | `ownership` · `moves` · `copy_clone` · `borrowing` | Ownership |
+| 04 | `lifetimes` · `lifetime_elision` · `dangling_refs` | Lifetimes |
+| 05 | `structs` · `enums` · `pattern_matching` · `option_result` | Structs & enums |
+| 06 | `traits` · `generics` · `trait_objects` · `advanced_traits` | Traits & generics |
+| 07 | `result_patterns` · `thiserror_example` · `anyhow_example` · `panic_basics` | Error handling |
+| 08 | `vec_collections` · `hashmap_hashset` · `iterators` · `custom_iterators` | Collections |
+| 09 | `closures` · `functional_patterns` · `function_pointers` | Closures |
+| 10 | `modules` · `visibility` · `cargo_features` | Modules & crates |
+| 11 | `doc_examples` | Testing & docs |
+| 12 | `box_pointer` · `rc_arc` · `cell_refcell` · `mutex_rwlock` · `deref_drop` | Smart pointers |
+| 13 | `threads` · `channels` · `shared_state` | Concurrency |
+| 14 | `async_basics` · `tokio_tasks` · `streams` · `pin_unpin` | Async / Tokio |
+| 15 | `macro_rules` · `derive_macros` · `builtin_macros` | Macros |
+| 16 | `unsafe_blocks` · `raw_pointers` | Unsafe Rust |
+| 17 | `ffi_basics` | FFI & interop |
+| 18 | `performance_tips` | Performance |
+| 19 | `clap_basics` · `file_tool` | CLI apps |
+| 20 | `web_server` | Web API (axum) |
+| 21 | `builder_pattern` · `newtype_pattern` · `state_machine` · `type_state` | Advanced patterns |
+| 22 | `gc_vs_ownership` · `classes_vs_structs` · `linq_vs_iterators` · `async_model_comparison` · `exceptions_vs_results` | Migration guides |
 
 ---
 
