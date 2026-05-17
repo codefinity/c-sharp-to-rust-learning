@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rustup show *)",
+      "Bash(rustc --version)",
+      "Bash(cargo --version)",
+      "PowerShell(head -n 50)",
+      "Bash(cargo check *)"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+[package]
+name        = "structs_enums_and_pattern_matching"
+version     = "0.1.0"
+edition.workspace     = true
+rust-version.workspace = true
+
+[[bin]]
+name = "structs"
+path = "src/bin/structs.rs"
+
+[[bin]]
+name = "enums"
+path = "src/bin/enums.rs"
+
+[[bin]]
+name = "pattern_matching"
+path = "src/bin/pattern_matching.rs"
+
+[[bin]]
+name = "option_result"
+path = "src/bin/option_result.rs"

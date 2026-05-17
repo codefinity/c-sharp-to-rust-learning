@@ -1,0 +1,28 @@
+[package]
+name        = "async_await_and_tokio"
+version     = "0.1.0"
+edition.workspace     = true
+rust-version.workspace = true
+
+[dependencies]
+tokio.workspace        = true
+futures.workspace      = true
+tokio-stream.workspace = true
+tracing.workspace            = true
+tracing-subscriber.workspace = true
+
+[[bin]]
+name = "async_basics"
+path = "src/bin/async_basics.rs"
+
+[[bin]]
+name = "tokio_tasks"
+path = "src/bin/tokio_tasks.rs"
+
+[[bin]]
+name = "streams"
+path = "src/bin/streams.rs"
+
+[[bin]]
+name = "pin_unpin"
+path = "src/bin/pin_unpin.rs"

@@ -1,0 +1,20 @@
+[package]
+name        = "testing_and_documentation"
+version     = "0.1.0"
+edition.workspace     = true
+rust-version.workspace = true
+
+[dependencies]
+proptest.workspace = true
+
+[lib]
+name = "testing_and_documentation"
+path = "src/lib.rs"
+
+[[bin]]
+name = "doc_examples"
+path = "src/bin/doc_examples.rs"
+
+[[test]]
+name = "integration_tests"
+path = "tests/integration_tests.rs"

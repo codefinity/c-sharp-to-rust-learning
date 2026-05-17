@@ -1,0 +1,25 @@
+[package]
+name        = "memory_management_and_smart_pointers"
+version     = "0.1.0"
+edition.workspace     = true
+rust-version.workspace = true
+
+[[bin]]
+name = "box_pointer"
+path = "src/bin/box_pointer.rs"
+
+[[bin]]
+name = "rc_arc"
+path = "src/bin/rc_arc.rs"
+
+[[bin]]
+name = "cell_refcell"
+path = "src/bin/cell_refcell.rs"
+
+[[bin]]
+name = "mutex_rwlock"
+path = "src/bin/mutex_rwlock.rs"
+
+[[bin]]
+name = "deref_drop"
+path = "src/bin/deref_drop.rs"

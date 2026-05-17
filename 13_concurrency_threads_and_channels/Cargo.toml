@@ -1,0 +1,17 @@
+[package]
+name        = "concurrency_threads_and_channels"
+version     = "0.1.0"
+edition.workspace     = true
+rust-version.workspace = true
+
+[[bin]]
+name = "threads"
+path = "src/bin/threads.rs"
+
+[[bin]]
+name = "channels"
+path = "src/bin/channels.rs"
+
+[[bin]]
+name = "shared_state"
+path = "src/bin/shared_state.rs"

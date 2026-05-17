@@ -1,0 +1,17 @@
+[package]
+name        = "closures_and_functional_patterns"
+version     = "0.1.0"
+edition.workspace     = true
+rust-version.workspace = true
+
+[[bin]]
+name = "closures"
+path = "src/bin/closures.rs"
+
+[[bin]]
+name = "function_pointers"
+path = "src/bin/function_pointers.rs"
+
+[[bin]]
+name = "functional_patterns"
+path = "src/bin/functional_patterns.rs"

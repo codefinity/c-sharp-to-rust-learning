@@ -1,0 +1,21 @@
+[package]
+name        = "traits_generics_and_impl_blocks"
+version     = "0.1.0"
+edition.workspace     = true
+rust-version.workspace = true
+
+[[bin]]
+name = "traits"
+path = "src/bin/traits.rs"
+
+[[bin]]
+name = "generics"
+path = "src/bin/generics.rs"
+
+[[bin]]
+name = "trait_objects"
+path = "src/bin/trait_objects.rs"
+
+[[bin]]
+name = "advanced_traits"
+path = "src/bin/advanced_traits.rs"

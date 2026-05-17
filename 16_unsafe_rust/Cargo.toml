@@ -1,0 +1,15 @@
+[package]
+name        = "unsafe_rust"
+version     = "0.1.0"
+edition.workspace     = true
+rust-version.workspace = true
+
+[dependencies]
+
+[[bin]]
+name = "unsafe_blocks"
+path = "src/bin/unsafe_blocks.rs"
+
+[[bin]]
+name = "raw_pointers"
+path = "src/bin/raw_pointers.rs"

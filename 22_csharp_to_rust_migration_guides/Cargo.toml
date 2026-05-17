@@ -1,0 +1,28 @@
+[package]
+name        = "csharp_to_rust_migration_guides"
+version     = "0.1.0"
+edition.workspace     = true
+rust-version.workspace = true
+
+[dependencies]
+tokio.workspace = true
+
+[[bin]]
+name = "gc_vs_ownership"
+path = "src/bin/gc_vs_ownership.rs"
+
+[[bin]]
+name = "classes_vs_structs"
+path = "src/bin/classes_vs_structs.rs"
+
+[[bin]]
+name = "linq_vs_iterators"
+path = "src/bin/linq_vs_iterators.rs"
+
+[[bin]]
+name = "async_model_comparison"
+path = "src/bin/async_model_comparison.rs"
+
+[[bin]]
+name = "exceptions_vs_results"
+path = "src/bin/exceptions_vs_results.rs"

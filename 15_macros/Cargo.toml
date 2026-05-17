@@ -1,0 +1,19 @@
+[package]
+name        = "macros"
+version     = "0.1.0"
+edition.workspace     = true
+rust-version.workspace = true
+
+[dependencies]
+
+[[bin]]
+name = "macro_rules"
+path = "src/bin/macro_rules.rs"
+
+[[bin]]
+name = "builtin_macros"
+path = "src/bin/builtin_macros.rs"
+
+[[bin]]
+name = "derive_macros"
+path = "src/bin/derive_macros.rs"

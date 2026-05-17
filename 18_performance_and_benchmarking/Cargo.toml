@@ -1,0 +1,23 @@
+[package]
+name        = "performance_and_benchmarking"
+version     = "0.1.0"
+edition.workspace     = true
+rust-version.workspace = true
+
+[dependencies]
+rand.workspace = true
+
+[dev-dependencies]
+criterion.workspace = true
+
+[[bin]]
+name = "performance_tips"
+path = "src/bin/performance_tips.rs"
+
+[[bench]]
+name = "string_bench"
+harness = false
+
+[[bench]]
+name = "iter_bench"
+harness = false

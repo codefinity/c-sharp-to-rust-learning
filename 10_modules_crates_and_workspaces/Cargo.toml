@@ -1,0 +1,17 @@
+[package]
+name        = "modules_crates_and_workspaces"
+version     = "0.1.0"
+edition.workspace     = true
+rust-version.workspace = true
+
+[[bin]]
+name = "modules"
+path = "src/bin/modules.rs"
+
+[[bin]]
+name = "visibility"
+path = "src/bin/visibility.rs"
+
+[[bin]]
+name = "cargo_features"
+path = "src/bin/cargo_features.rs"

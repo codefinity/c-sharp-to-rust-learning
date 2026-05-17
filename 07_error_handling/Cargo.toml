@@ -1,0 +1,25 @@
+[package]
+name        = "error_handling"
+version     = "0.1.0"
+edition.workspace     = true
+rust-version.workspace = true
+
+[dependencies]
+thiserror.workspace = true
+anyhow.workspace    = true
+
+[[bin]]
+name = "panic_basics"
+path = "src/bin/panic_basics.rs"
+
+[[bin]]
+name = "result_patterns"
+path = "src/bin/result_patterns.rs"
+
+[[bin]]
+name = "thiserror_example"
+path = "src/bin/thiserror_example.rs"
+
+[[bin]]
+name = "anyhow_example"
+path = "src/bin/anyhow_example.rs"

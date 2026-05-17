@@ -1,0 +1,17 @@
+[package]
+name        = "getting_started"
+version     = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+
+[[bin]]
+name = "hello_world"
+path = "src/bin/hello_world.rs"
+
+[[bin]]
+name = "cargo_basics"
+path = "src/bin/cargo_basics.rs"
+
+[[bin]]
+name = "rustup_info"
+path = "src/bin/rustup_info.rs"

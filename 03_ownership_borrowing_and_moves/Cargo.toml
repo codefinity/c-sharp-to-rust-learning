@@ -1,0 +1,21 @@
+[package]
+name        = "ownership_borrowing_and_moves"
+version     = "0.1.0"
+edition.workspace     = true
+rust-version.workspace = true
+
+[[bin]]
+name = "ownership"
+path = "src/bin/ownership.rs"
+
+[[bin]]
+name = "moves"
+path = "src/bin/moves.rs"
+
+[[bin]]
+name = "copy_clone"
+path = "src/bin/copy_clone.rs"
+
+[[bin]]
+name = "borrowing"
+path = "src/bin/borrowing.rs"

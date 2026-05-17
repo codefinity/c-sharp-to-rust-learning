@@ -1,0 +1,75 @@
+[workspace]
+resolver = "2"
+members = [
+    "01_getting_started",
+    "02_syntax_and_basic_types",
+    "03_ownership_borrowing_and_moves",
+    "04_references_and_lifetimes",
+    "05_structs_enums_and_pattern_matching",
+    "06_traits_generics_and_impl_blocks",
+    "07_error_handling",
+    "08_collections_and_iterators",
+    "09_closures_and_functional_patterns",
+    "10_modules_crates_and_workspaces",
+    "11_testing_and_documentation",
+    "12_memory_management_and_smart_pointers",
+    "13_concurrency_threads_and_channels",
+    "14_async_await_and_tokio",
+    "15_macros",
+    "16_unsafe_rust",
+    "17_ffi_and_interop",
+    "18_performance_and_benchmarking",
+    "19_cli_apps",
+    "20_web_api_project",
+    "21_advanced_patterns",
+    "22_csharp_to_rust_migration_guides",
+]
+
+[workspace.package]
+edition      = "2024"
+rust-version = "1.95"
+authors      = ["C# to Rust Tutorial"]
+license      = "MIT"
+
+# ---------------------------------------------------------------------------
+# Shared dependency versions — individual crates reference these as
+# { workspace = true } so version bumps happen in one place.
+# ---------------------------------------------------------------------------
+[workspace.dependencies]
+# Error handling
+thiserror = "2"
+anyhow    = "1"
+
+# Async runtime
+tokio        = { version = "1", features = ["full"] }
+futures      = "0.3"
+tokio-stream = { version = "0.1", features = ["sync"] }
+
+# Serialization
+serde      = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+# CLI
+clap = { version = "4", features = ["derive"] }
+
+# Web framework + middleware
+axum        = { version = "0.8", features = ["json"] }
+tower       = "0.5"
+tower-http  = { version = "0.6", features = ["trace"] }
+hyper       = { version = "1", features = ["full"] }
+
+# Testing / property-based testing
+proptest = "1"
+
+# Benchmarking
+criterion = { version = "0.5", features = ["html_reports"] }
+
+# Observability
+tracing            = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# Randomness
+rand = "0.9"
+
+# Low-level C interop
+libc = "0.2"

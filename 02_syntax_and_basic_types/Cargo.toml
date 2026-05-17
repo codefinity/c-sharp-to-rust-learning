@@ -1,0 +1,29 @@
+[package]
+name        = "syntax_and_basic_types"
+version     = "0.1.0"
+edition.workspace     = true
+rust-version.workspace = true
+
+[[bin]]
+name = "variables_mutability"
+path = "src/bin/variables_mutability.rs"
+
+[[bin]]
+name = "scalar_types"
+path = "src/bin/scalar_types.rs"
+
+[[bin]]
+name = "compound_types"
+path = "src/bin/compound_types.rs"
+
+[[bin]]
+name = "strings"
+path = "src/bin/strings.rs"
+
+[[bin]]
+name = "constants_statics"
+path = "src/bin/constants_statics.rs"
+
+[[bin]]
+name = "control_flow"
+path = "src/bin/control_flow.rs"

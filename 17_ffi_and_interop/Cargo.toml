@@ -1,0 +1,12 @@
+[package]
+name        = "ffi_and_interop"
+version     = "0.1.0"
+edition.workspace     = true
+rust-version.workspace = true
+
+[dependencies]
+libc.workspace = true
+
+[[bin]]
+name = "ffi_basics"
+path = "src/bin/ffi_basics.rs"
