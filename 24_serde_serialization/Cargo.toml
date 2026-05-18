@@ -1,0 +1,17 @@
+[package]
+name        = "serde_serialization"
+version     = "0.1.0"
+edition.workspace     = true
+rust-version.workspace = true
+
+[dependencies]
+serde.workspace      = true
+serde_json.workspace = true
+
+[[bin]]
+name = "json_basics"
+path = "src/bin/json_basics.rs"
+
+[[bin]]
+name = "advanced_serde"
+path = "src/bin/advanced_serde.rs"

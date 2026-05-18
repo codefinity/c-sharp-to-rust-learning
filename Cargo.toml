@@ -24,6 +24,8 @@ members = [
     "21_advanced_patterns",
     "22_csharp_to_rust_migration_guides",
     "23_oop_in_rust",
+    "24_serde_serialization",
+    "25_logging_tracing",
 ]
 
 [workspace.package]

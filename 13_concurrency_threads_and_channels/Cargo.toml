@@ -15,3 +15,7 @@ path = "src/bin/channels.rs"
 [[bin]]
 name = "shared_state"
 path = "src/bin/shared_state.rs"
+
+[[bin]]
+name = "send_sync"
+path = "src/bin/send_sync.rs"

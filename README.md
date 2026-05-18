@@ -356,6 +356,10 @@ Benchmarks always run in release mode automatically.
 | 21 | `builder_pattern` · `newtype_pattern` · `state_machine` · `type_state` | Advanced patterns |
 | 22 | `gc_vs_ownership` · `classes_vs_structs` · `linq_vs_iterators` · `async_model_comparison` · `exceptions_vs_results` | Migration guides |
 | 23 | `encapsulation` · `inheritance_composition` · `polymorphism` · `operator_overloading` | OOP in Rust |
+| 24 | `json_basics` · `advanced_serde` | Serde serialization |
+| 25 | `tracing_basics` | Logging & tracing |
+| 13+ | `send_sync` | Send + Sync (added to module 13) |
+| 11+ | `unit_testing` · `proptest_basics` | Testing (added to module 11) |
 
 ---
 
@@ -498,6 +502,10 @@ Benchmarks always run in release mode automatically.
 | 21 | Advanced Patterns | Builder, newtype, type-state | Design patterns |
 | 22 | Migration Guides | GC, classes, LINQ, async, errors | Everything above, together |
 | 23 | OOP in Rust | Encapsulation, inheritance→composition, polymorphism, operators | Module 06 + 22 |
+| 24 | Serde | JSON serialization, attributes, enum tagging | Module 20 |
+| 25 | Logging | tracing spans, structured fields, #[instrument] | Module 20 |
+| 13+ | Send + Sync | Thread-safety type system, Arc/Mutex guide | Module 13 |
+| 11+ | Testing | Unit tests, proptest, cargo test flags | Module 11 |
 
 ---
 

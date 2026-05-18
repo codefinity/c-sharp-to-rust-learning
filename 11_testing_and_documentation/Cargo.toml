@@ -15,6 +15,14 @@ path = "src/lib.rs"
 name = "doc_examples"
 path = "src/bin/doc_examples.rs"
 
+[[bin]]
+name = "unit_testing"
+path = "src/bin/unit_testing.rs"
+
+[[bin]]
+name = "proptest_basics"
+path = "src/bin/proptest_basics.rs"
+
 [[test]]
 name = "integration_tests"
 path = "tests/integration_tests.rs"
