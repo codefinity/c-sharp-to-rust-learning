@@ -5,7 +5,8 @@
       "Bash(rustc --version)",
       "Bash(cargo --version)",
       "PowerShell(head -n 50)",
-      "Bash(cargo check *)"
+      "Bash(cargo check *)",
+      "Bash(cargo run *)"
     ]
   }
 }

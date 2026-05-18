@@ -1,0 +1,21 @@
+[package]
+name        = "oop_in_rust"
+version     = "0.1.0"
+edition.workspace     = true
+rust-version.workspace = true
+
+[[bin]]
+name = "encapsulation"
+path = "src/bin/encapsulation.rs"
+
+[[bin]]
+name = "inheritance_composition"
+path = "src/bin/inheritance_composition.rs"
+
+[[bin]]
+name = "polymorphism"
+path = "src/bin/polymorphism.rs"
+
+[[bin]]
+name = "operator_overloading"
+path = "src/bin/operator_overloading.rs"

@@ -355,6 +355,7 @@ Benchmarks always run in release mode automatically.
 | 20 | `web_server` | Web API (axum) |
 | 21 | `builder_pattern` · `newtype_pattern` · `state_machine` · `type_state` | Advanced patterns |
 | 22 | `gc_vs_ownership` · `classes_vs_structs` · `linq_vs_iterators` · `async_model_comparison` · `exceptions_vs_results` | Migration guides |
+| 23 | `encapsulation` · `inheritance_composition` · `polymorphism` · `operator_overloading` | OOP in Rust |
 
 ---
 
@@ -496,6 +497,7 @@ Benchmarks always run in release mode automatically.
 | 20 | Web API | axum, REST, State, JSON | ASP.NET Core minimal API |
 | 21 | Advanced Patterns | Builder, newtype, type-state | Design patterns |
 | 22 | Migration Guides | GC, classes, LINQ, async, errors | Everything above, together |
+| 23 | OOP in Rust | Encapsulation, inheritance→composition, polymorphism, operators | Module 06 + 22 |
 
 ---
 

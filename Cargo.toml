@@ -23,6 +23,7 @@ members = [
     "20_web_api_project",
     "21_advanced_patterns",
     "22_csharp_to_rust_migration_guides",
+    "23_oop_in_rust",
 ]
 
 [workspace.package]
